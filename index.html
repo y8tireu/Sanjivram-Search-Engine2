@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjivram's Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Sanjivram's Search Engine</div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search for information..." onkeypress="handleKeyPress(event)">
+            <button onclick="search()">Search</button>
+        </div>
+        <div class="settings">
+            <button id="settings-toggle" onclick="toggleSettingsMenu()">⚙️</button>
+            <div id="settings-menu" class="settings-menu">
+                <p>Select Theme:</p>
+                <button onclick="setTheme('light')">Light Mode</button>
+                <button onclick="setTheme('dark')">Dark Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div id="main-info-card" class="main-info-card"></div>
+            <div id="additional-info" class="additional-info"></div>
+        </div>
+        <div id="results" class="results-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
